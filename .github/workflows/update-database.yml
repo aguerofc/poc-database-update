@@ -1,0 +1,78 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Update Database and Push
+
+# Controls when the workflow will run..
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "update-and-commit"
+  update-and-commit:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Setup .NET
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v1  # Note: This might be the correct reference
+        with:
+          msbuild-version: '16.0'
+
+      # Build and Update Database Project
+      - name: Build and Update Database Project
+        run: |
+          # Replace the following command with your actual command to update the database project
+           msbuild /t:Build /p:Configuration=Debug GBSMrktDb.sln
+      
+      # Read Changes from JSON
+      - name: Read Changes from JSON
+        run: |
+          # Read the changes from the JSON file and set it as an output variable
+          #changes=$(cat /JsonSchema/changes.json)
+          #echo "::set-output name=json_changes::$changes"
+          echo "::set-output name=json_changes::$(cat ./JsonSchema/changes.json)"
+      
+      - name: Show Changes
+        run: echo ""
+        
+      # Update Database Schema
+      - name: Update Database Schema
+        run: |
+          # Replace this command with your actual command to update the database schema
+          # Example: sqlpackage.exe /a:Publish /tsn:YourServer /tdn:YourDatabase /sf:YourDatabaseProject\bin\Debug\YourDatabaseProject.dacpac /p:GenerateSmartDefaults=True
+          echo "Your update command here"
+          
+      # Configure Git  
+      - name: Configure Git
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+      
+      # Commit Changes
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m "Automated update of database schema" || exit 0
+      
+      # Push Changes
+      #- name: Push Changes
+       # run: |
+       #   git push origin HEAD:main
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ACTION_TOKEN }}

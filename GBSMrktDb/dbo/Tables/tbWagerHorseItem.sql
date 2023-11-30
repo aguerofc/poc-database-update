@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[tbWagerHorseItem] (
+    [TicketNumber]            INT           NOT NULL,
+    [WagerNumber]             INT           NOT NULL,
+    [ItemNumber]              INT           NOT NULL,
+    [TrackName]               CHAR (60)     NULL,
+    [RaceDate]                DATETIME      NULL,
+    [RaceNumber]              INT           NULL,
+    [HorseName]               CHAR (60)     NULL,
+    [WagerDesc]               VARCHAR (255) NULL,
+    [Outcome]                 CHAR (1)      NULL,
+    [AmountWagered]           FLOAT (53)    NULL,
+    [GradeNum]                INT           NULL,
+    [WinPlaceOrShow]          CHAR (1)      NULL,
+    [OriginatingTicketNumber] INT           NULL,
+    [FinalMoney]              FLOAT (53)    NULL,
+    [FinalToBase]             FLOAT (53)    NULL,
+    [FinalAmountWon]          FLOAT (53)    NULL,
+    [GradeToWinAmount]        FLOAT (53)    NULL,
+    [FinalAmountWagered]      FLOAT (53)    NULL,
+    [CurrencyCode]            CHAR (3)      NULL,
+    [ValueDate]               DATETIME      NULL,
+    [ArchiveFlag]             CHAR (1)      NULL,
+    [Slot]                    INT           NULL,
+    [FreePlayFlag]            CHAR (1)      NULL,
+    CONSTRAINT [PK_tbWagerHorseItem] PRIMARY KEY CLUSTERED ([TicketNumber] ASC, [WagerNumber] ASC, [ItemNumber] ASC) WITH (FILLFACTOR = 80)
+);
+

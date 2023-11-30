@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[tbWagerManualPlay] (
+    [TicketNumber]     INT           NOT NULL,
+    [WagerNumber]      INT           NOT NULL,
+    [ItemNumber]       INT           NOT NULL,
+    [Description]      VARCHAR (MAX) NULL,
+    [GradeDateTime]    DATETIME      NULL,
+    [AmountWagered]    FLOAT (53)    NULL,
+    [ToWinAmount]      FLOAT (53)    NULL,
+    [FinalMoney]       FLOAT (53)    NULL,
+    [FinalToBase]      FLOAT (53)    NULL,
+    [Outcome]          CHAR (1)      NULL,
+    [GradeNum]         INT           NULL,
+    [GradeLossAmount]  FLOAT (53)    NULL,
+    [GradeToWinAmount] FLOAT (53)    NULL,
+    [CurrencyCode]     CHAR (3)      NULL,
+    [ValueDate]        DATETIME      NULL,
+    [ArchiveFlag]      CHAR (1)      NULL,
+    [LayoffFlag]       CHAR (1)      NULL,
+    [FreePlayFlag]     CHAR (1)      NULL,
+    [FinalDecimal]     FLOAT (53)    NULL,
+    [FinalNumerator]   INT           NULL,
+    [FinalDenominator] INT           NULL,
+    [PriceType]        CHAR (1)      DEFAULT ('A') NULL,
+    [LastEditedBy]     VARCHAR (50)  NULL,
+    [LastEditedByOn]   DATETIME      NULL,
+    CONSTRAINT [PK_tbWagerManualPlay_1__27] PRIMARY KEY CLUSTERED ([TicketNumber] ASC, [WagerNumber] ASC, [ItemNumber] ASC) WITH (FILLFACTOR = 90)
+);
+
