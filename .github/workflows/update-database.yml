@@ -31,7 +31,7 @@ jobs:
         run: |
           choco install visualstudio2019buildtools -y
           choco install mssql-server-sqlpackage -y
-          RefreshEnv.cmd 
+          Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 
       # Setup .NET
       - name: Set up MSBuild
