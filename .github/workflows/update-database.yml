@@ -27,12 +27,18 @@ jobs:
         uses: actions/checkout@v3
       
       # Install SQL Server Data Tools
+      - name: Ensure Default Chocolatey Source
+        run: choco source add --name="'chocolatey'" --source="'https://chocolatey.org/api/v2/'" --priority="'1'" --allow-unofficial        
+
       - name: Install SQL Server Data Tools
         run: |
           choco install visualstudio2019buildtools -y
           choco install mssql-server-sqlpackage -y
-          Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+          #Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 
+      - name: Install sqlpackage
+        run: choco install mssql-server-sqlpackage -y --source="'https://chocolatey.org/api/v2/'"
+        
       # Setup .NET
       - name: Set up MSBuild
         uses: microsoft/setup-msbuild@v1  # Note: This might be the correct reference
