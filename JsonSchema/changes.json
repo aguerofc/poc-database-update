@@ -1,1 +1,1 @@
-[{"DBName":"GBSMRKT","ObjectName":"tbCustomer","EventType":"ALTER_TABLE","LoginName":"BASReplicator","SQLCommand":"ALTER TABLE dbo.tbCustomer DROP CONSTRAINT DF_tbCustomer_VigDiscountPercent_1","AuditDateTime":"2023-11-23T12:25:49.370"}]
+[{"DBName":"GBSMRKT","ObjectName":"Tmp_tbCustomer","EventType":"ALTER_TABLE","LoginName":"BASReplicator","SQLCommand":"ALTER TABLE dbo.Tmp_tbCustomer ADD CONSTRAINT DF_tbCustomer_ParlayMaxPayout_1 DEFAULT ((0)) FOR ParlayMaxPayout","AuditDateTime":"2023-11-23T12:25:49.370"}]

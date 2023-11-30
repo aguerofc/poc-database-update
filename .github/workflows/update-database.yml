@@ -50,11 +50,10 @@ jobs:
         run: echo ""
         
       # Update Database Schema
-      - name: Update Database Schema
+      - name: Update Database Schema        
         run: |
-          # Replace this command with your actual command to update the database schema
-          # Example: sqlpackage.exe /a:Publish /tsn:YourServer /tdn:YourDatabase /sf:YourDatabaseProject\bin\Debug\YourDatabaseProject.dacpac /p:GenerateSmartDefaults=True
-          echo "Your update command here"
+        sqlpackage /a:Script /sf:./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac /p:OutputPath=./Script.sql
+
           
       # Configure Git  
       - name: Configure Git
