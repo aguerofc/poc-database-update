@@ -28,10 +28,10 @@ jobs:
       
       # Install SQL Server Data Tools
       - name: Install SQL Server Data Tools
-      run: |
-        choco install visualstudio2019buildtools -y
-        choco install mssql-server-sqlpackage -y
-        RefreshEnv.cmd 
+        run: |
+          choco install visualstudio2019buildtools -y
+          choco install mssql-server-sqlpackage -y
+          RefreshEnv.cmd 
 
       # Setup .NET
       - name: Set up MSBuild
