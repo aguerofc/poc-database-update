@@ -54,9 +54,10 @@ jobs:
       # Download and Install sqlpackage     
       - name: Download and Install sqlpackage
         run: |
-          Invoke-WebRequest -Uri https://download.microsoft.com/download/7/1/7/7179B8C6-4E7A-4DEE-8EC4-D8B955CBD07A/SqlPackage.SqlServer.zip -OutFile SqlPackage.zip
-          Expand-Archive -Path SqlPackage.zip -DestinationPath C:\sqlpackage
+          Invoke-WebRequest -Uri https://aka.ms/sqlpackage -OutFile sqlpackage.zip
+          Expand-Archive -Path .\sqlpackage.zip -DestinationPath C:\sqlpackage
           [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\sqlpackage", [System.EnvironmentVariableTarget]::Machine)
+
       
       # Read Changes from JSON
       - name: Read Changes from JSON
