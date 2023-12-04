@@ -36,7 +36,7 @@ jobs:
           #choco install mssql-server-sqlpackage -y
           Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 
-      - name: Install sqlpackage
+     #- name: Install sqlpackage
         #run: choco install mssql-server-sqlpackage -y --source="'https://chocolatey.org/api/v2/'"
         
       # Setup .NET
