@@ -55,8 +55,8 @@ jobs:
       - name: Download and Install sqlpackage
         run: |
           Invoke-WebRequest -Uri https://aka.ms/sqlpackage -OutFile sqlpackage.zip -verbose
-          Expand-Archive -Path .\sqlpackage.zip -DestinationPath C:\sqlpackage -verbose
-          [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\sqlpackage", [System.EnvironmentVariableTarget]::Machine) 
+          Expand-Archive -Path .\sqlpackage.zip -DestinationPath .\sqlpackage -verbose
+          [Environment]::SetEnvironmentVariable("Path", $env:Path + ";.\sqlpackage", [System.EnvironmentVariableTarget]::Machine) 
 
       
       # Read Changes from JSON
@@ -73,7 +73,7 @@ jobs:
       # Update Database Schema
       - name: Update Database Schema        
         run: |
-         sqlpackage /a:Script /sf:./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac /p:OutputPath=./Script/Script.sql
+         .\sqlpackage /a:Script /sf:./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac /p:OutputPath=./Script/Script.sql
 
           
       # Configure Git  
