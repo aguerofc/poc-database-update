@@ -68,8 +68,8 @@ jobs:
           #echo "::set-output name=json_changes::$changes"
           echo "::set-output name=json_changes::$(cat ./JsonSchema/changes.json)"
       
-      - name: Show Changes
-        run: echo ""
+      - name: List Contents of C:\sqlpackage
+        run: Get-ChildItem -Path C:\sqlpackage
         
       # Update Database Schema
       - name: Update Database Schema        
