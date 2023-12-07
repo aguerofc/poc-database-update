@@ -72,12 +72,12 @@ jobs:
           echo "::set-output name=json_changes::$(cat ./JsonSchema/changes.json)"
       
       - name: List Contents of C:\sqlpackage
-        run: Get-ChildItem -Path .\sqlpackage
+        run: Get-ChildItem -Path C:\sqlpackage
         
       # Update Database Schema
       - name: Update Database Schema        
         run: |         
-         .\sqlpackage\SqlPackage.exe /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
+         C:\sqlpackage\sqlpackage.exe /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
 
           
       # Configure Git  
