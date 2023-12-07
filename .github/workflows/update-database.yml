@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repository
         uses: actions/checkout@v3
+        
+      
+       
       
       # Install SQL Server Data Tools
       - name: Ensure Default Chocolatey Source
@@ -41,7 +44,7 @@ jobs:
         
       # Setup .NET
       - name: Set up MSBuild
-        uses: microsoft/setup-msbuild@v1  # Note: This might be the correct reference
+        uses: microsoft/setup-msbuild@v1.0.2  # Note: This might be the correct reference
         with:
           msbuild-version: '16.0'
 
@@ -74,7 +77,8 @@ jobs:
       # Update Database Schema
       - name: Update Database Schema        
         run: |
-         & "C:\sqlpackage\sqlpackage.exe" /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
+         #& "C:\sqlpackage\sqlpackage.exe" /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
+         & "$env:ProgramFiles\Microsoft SQL Server\DAC\bin\SqlPackage.exe" /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
 
           
       # Configure Git  
