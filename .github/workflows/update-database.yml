@@ -77,7 +77,7 @@ jobs:
       # Update Database Schema
       - name: Update Database Schema        
         run: |         
-         & "$env:ProgramFiles\Microsoft SQL Server\DAC\bin\SqlPackage.exe" /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
+         ".\sqlpackage\SqlPackage.exe" /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
 
           
       # Configure Git  
