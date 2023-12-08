@@ -24,10 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repository
-        uses: actions/checkout@v3
-        
-      
-       
+        uses: actions/checkout@v3\
       
       # Install SQL Server Data Tools
       - name: Ensure Default Chocolatey Source
@@ -62,6 +59,9 @@ jobs:
           Remove-Item .\SqlPackage.zip
           [System.Environment]::SetEnvironmentVariable('Path', "$env:Path;C:\sqlpackage", [System.EnvironmentVariableTarget]::Machine)
 
+      - name: get sqlpackage version
+        working-directory: C:\sqlpackage
+        run: ./SqlPackage /version
       
       # Read Changes from JSON
       - name: Read Changes from JSON
