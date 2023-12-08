@@ -68,7 +68,7 @@ jobs:
       # Update Database Schema
       - name: Update Database Schema        
         run: |         
-         C:\sqlpackage\sqlpackage /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/Script.sql"
+         C:\sqlpackage\sqlpackage /a:Script /sf:"./GBSMrktDb/bin/Debug/GBSMrktDb.dacpac" /p:OutputPath="./Script/tb_stg_ChainConnect.sql.sql"
 
           
       # Configure Git  
