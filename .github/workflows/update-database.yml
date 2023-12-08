@@ -61,7 +61,7 @@ jobs:
 
       - name: get sqlpackage version
         working-directory: C:\sqlpackage
-        run: ./sqlpackage /version
+        run: ./sqlpackage.exe /version
       
       # Read Changes from JSON
       - name: Read Changes from JSON
