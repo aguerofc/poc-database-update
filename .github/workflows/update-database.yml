@@ -33,11 +33,7 @@ jobs:
       - name: Install SQL Server Data Tools
         run: |
           choco install visualstudio2019buildtools -y
-          #choco install mssql-server-sqlpackage -y
           Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-
-     #- name: Install sqlpackage
-        #run: choco install mssql-server-sqlpackage -y --source="'https://chocolatey.org/api/v2/'"
         
       # Setup .NET
       - name: Set up MSBuild
@@ -48,7 +44,6 @@ jobs:
       # Build and Update Database Project
       - name: Build and Update Database Project
         run: |
-          # Replace the following command with your actual command to update the database project
            msbuild /t:Build /p:Configuration=Debug GBSMrktDb.sln
            
       # Download and Install sqlpackage     
@@ -57,11 +52,7 @@ jobs:
           Invoke-WebRequest -Uri https://go.microsoft.com/fwlink/?linkid=2157202 -OutFile SqlPackage.zip
           Expand-Archive -Path .\SqlPackage.zip -DestinationPath C:\sqlpackage
           Remove-Item .\SqlPackage.zip
-          [System.Environment]::SetEnvironmentVariable('Path', "$env:Path;C:\sqlpackage", [System.EnvironmentVariableTarget]::Machine)
-
-      - name: get sqlpackage version
-        working-directory: C:\sqlpackage
-        run: ./sqlpackage /version
+          [System.Environment]::SetEnvironmentVariable('Path', "$env:Path;C:\sqlpackage", [System.EnvironmentVariableTarget]::Machine)   
       
       # Read Changes from JSON
       - name: Read Changes from JSON
