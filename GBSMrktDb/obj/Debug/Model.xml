@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="GBSMrktDb.dll" />
-			<Metadata Name="FileName" Value="D:\A\POC-DATABASE-UPDATE\POC-DATABASE-UPDATE\GBSMRKTDB\OBJ\DEBUG\GBSMRKTDB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\CARLOS.AGUERO\SOURCE\REPOS\POC-DATABASE-UPDATE\GBSMRKTDB\OBJ\DEBUG\GBSMRKTDB.DLL" />
 			<Metadata Name="AssemblyName" Value="GBSMrktDb" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -6210,7 +6210,7 @@
 								<Element Type="SqlTypeSpecifier">
 									<Relationship Name="Type">
 										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
+											<References ExternalSource="BuiltIns" Name="[bigint]" />
 										</Entry>
 									</Relationship>
 								</Element>

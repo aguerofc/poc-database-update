@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[tbTicket] (
-    [TicketNumber]    INT           NOT NULL,
+    [TicketNumber]    BIGINT           NOT NULL,
     [CId]             INT           NULL,
     [CustomerID]      CHAR (50)     NULL,
     [StartDateTime]   DATETIME      NULL,

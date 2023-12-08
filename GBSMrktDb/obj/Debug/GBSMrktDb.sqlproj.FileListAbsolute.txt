@@ -28,3 +28,13 @@ D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\postdeploy.sql
 D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\predeploy.sql
 D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.dll
 D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.pdb
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\bin\Debug\GBSMrktDb.dacpac
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.sqlproj.AssemblyReference.cache
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\Model.xml
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\refactor.xml
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\postdeploy.sql
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\predeploy.sql
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.dll
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.pdb
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\bin\Debug\GBSMrktDb.dll
+C:\Users\carlos.aguero\source\repos\poc-database-update\GBSMrktDb\bin\Debug\GBSMrktDb.pdb
