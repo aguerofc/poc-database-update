@@ -18,3 +18,13 @@ D:\a\test-database-load\test-database-load\GBSMrktDb\obj\Debug\postdeploy.sql
 D:\a\test-database-load\test-database-load\GBSMrktDb\obj\Debug\predeploy.sql
 D:\a\test-database-load\test-database-load\GBSMrktDb\obj\Debug\GBSMrktDb.dll
 D:\a\test-database-load\test-database-load\GBSMrktDb\obj\Debug\GBSMrktDb.pdb
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\bin\Debug\GBSMrktDb.dacpac
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\bin\Debug\GBSMrktDb.dll
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\bin\Debug\GBSMrktDb.pdb
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.sqlproj.AssemblyReference.cache
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\Model.xml
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\refactor.xml
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\postdeploy.sql
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\predeploy.sql
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.dll
+D:\a\poc-database-update\poc-database-update\GBSMrktDb\obj\Debug\GBSMrktDb.pdb
